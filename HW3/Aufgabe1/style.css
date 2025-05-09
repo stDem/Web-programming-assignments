@@ -1,0 +1,153 @@
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+    /* min-width: 340px; */
+    min-height: 100vh;
+    font-family: sans-serif;
+    color: #e5e7eb;
+    background-color: #e5e7eb;
+}
+
+svg {
+    max-height: 100%;
+}
+
+button {
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 200ms;
+}
+
+.link a:hover {
+    background-color: #ffffffa1;
+    color: #004288;
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+
+
+.container {
+    --container-width: 1180px;
+    --container-padding: 10px;
+    max-width: calc(var(--container-width) + var(--container-padding) * 2);
+    padding: 0 var(--container-padding);
+    margin: 0 auto;
+}
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    color: #e5e7eb;
+    background-color: #004288;
+}
+
+.header__nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    font-family: "Roboto-Bold", sans-serif;
+    font-size: 1em;
+}
+
+.header_logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.4em;
+}
+
+.logo-svg,
+
+.header__menu ul {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    font-size: 1em;
+    color: #e5e7eb;
+}
+
+.header__menu li {
+    position: relative;
+}
+
+.header__menu p {
+    text-decoration: underline;
+}
+
+ul.visually-hidden{
+    display: none;
+}
+
+ul.visible{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffffa1;
+    color: #004288;
+    border: 1px solid #ccc;
+    padding: 0.5em 0;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+
+@media (max-width: 1140px) {
+    .container {
+        --container-width: 880px;
+    }
+}
+@media (max-width: 940px) {
+    .container {
+        --container-width: 680px;
+    }
+}
+@media (max-width: 640px) {
+    .container {
+        --container-padding: 15px;
+    }
+}
+
